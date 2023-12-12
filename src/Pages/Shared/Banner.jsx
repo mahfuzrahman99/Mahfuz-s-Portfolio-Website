@@ -2,6 +2,10 @@ import bannerImg from "../../assets/IMG_20220712_182610-removebg-preview (1).png
 import { HiArrowDown, HiArrowRight } from "react-icons/hi";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Tilt from "react-parallax-tilt";
+// import "./ParallaxEffect.demozap.scss";
+// import "../Css/banner.css"
+
 const Banner = () => {
   return (
     <div className="flex items-center md:pt-14">
@@ -58,33 +62,54 @@ const Banner = () => {
             </span>
           </h1>
           <p>
-          Greetings! I am Mahfuzur Rahman Shabbir, a skilled MERN stack developer and front-end specialist. With expertise in crafting visually appealing websites, I excel at translating ideas into interactive web applications. Whether you are a small business building an online presence or a medium-sized enterprise, I am here to meet your digital needs
+            Greetings! I am Mahfuzur Rahman Shabbir, a skilled MERN stack
+            developer and front-end specialist. With expertise in crafting
+            visually appealing websites, I excel at translating ideas into
+            interactive web applications. Whether you are a small business
+            building an online presence or a medium-sized enterprise, I am here
+            to meet your digital needs
           </p>
           <div className="flex items-center ">
-          <a href="#portfolio" className="text-xl font-semibold btn btn-outline border-none text-white bg-[#06b6d4] rounded-md hover:bg-[#a6adbb] mr-3">
-            Portfolio
-            <span className="font-bold">
-              <HiArrowRight />
-            </span>
-          </a>
-          <a
-            href="/public/resume.pdf"
-            download="resume.pdf"
+            <a
+              href="#portfolio"
+              className="text-xl font-semibold btn btn-outline border-none text-white bg-[#06b6d4] rounded-md hover:bg-[#a6adbb] mr-3"
+            >
+              Portfolio
+              <span className="font-bold">
+                <HiArrowRight />
+              </span>
+            </a>
+            {/* <a
+            href="https://drive.google.com/uc?export=download&id=15vGf9GraoJfEomiBJqIo57LKhfXmirA7"
             className="text-xl font-semibold btn btn-outline border-none text-white bg-[#06b6d4] rounded-md hover:bg-[#a6adbb]"
           >
             Resume
             <span className="font-bold">
               <HiArrowDown />
             </span>
-          </a>
+          </a> */}
+            <a
+              href="/public/resume.pdf"
+              download="resume.pdf"
+              className="text-xl font-semibold btn btn-outline border-none text-white bg-[#06b6d4] rounded-md hover:bg-[#a6adbb]"
+            >
+              Resume
+              <span className="font-bold">
+                <HiArrowDown />
+              </span>
+            </a>
           </div>
         </div>
         <div className="flex justify-center w-full col-span-1">
-          <img
-            className="h-[400px] rounded-xl bg-[#a6adbb] shadow-[#a6adbb] shadow-lg"
-            src={bannerImg}
-            alt=""
-          />
+          <Tilt className="parallax-effect" perspective={500}>
+            <div className="inner-element ">
+              <img
+                className="h-[400px] rounded-xl bg-[#a6adbb] shadow-[#a6adbb] shadow-lg"
+                src={bannerImg}
+                alt=""
+              />
+            </div>
+          </Tilt>
         </div>
       </div>
     </div>

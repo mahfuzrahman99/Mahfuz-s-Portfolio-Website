@@ -1,4 +1,6 @@
+// import ForTest from "./ForTesst/ForTest";
 import About from "./Shared/About";
+import AllSkills from "./Shared/AllSkills";
 import Banner from "./Shared/Banner";
 import Contact from "./Shared/Contact";
 import Education from "./Shared/Education";
@@ -6,7 +8,6 @@ import Experience from "./Shared/Experience";
 import Footer from "./Shared/Footer";
 import Navbar from "./Shared/Navbar";
 import Portfolio from "./Shared/Portfolio";
-import Skills from "./Shared/Skills";
 
 
 const Home = () => {
@@ -28,7 +29,7 @@ const Home = () => {
         </div>
         <div id="skills" className="max-w-5xl mx-auto mb-24 pt-16">
             <h1 className="text-4xl font-bold underline mb-3">Skills</h1>
-            <Skills/>
+            <AllSkills/>
         </div>
         <div id="contact" className="max-w-5xl mx-auto mb-24 pt-16">
             <h1 className="text-4xl font-bold underline mb-3">Contact & Send Message</h1>
@@ -41,6 +42,9 @@ const Home = () => {
             <div className="col-span-1"><Education/></div>
             </div>
         </div>
+        {/* <div>
+            <ForTest/>
+        </div> */}
         <div>
             <Footer/>
         </div>
