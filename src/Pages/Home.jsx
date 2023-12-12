@@ -26,7 +26,7 @@ const Home = () => {
             <h1 className="text-4xl font-bold underline mb-3">Portfolio</h1>
             <Portfolio/>
         </div>
-        <div id="skills" className="max-w-5xl mx-auto mb-24 pt-20">
+        <div id="skills" className="max-w-5xl mx-auto mb-24 pt-16">
             <h1 className="text-4xl font-bold underline mb-3">Skills</h1>
             <Skills/>
         </div>
