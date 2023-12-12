@@ -18,19 +18,19 @@ const Home = () => {
         <div>
             <Banner/>
         </div>
-        <div id="about" className="max-w-5xl mx-auto">
+        <div id="about" className="max-w-5xl mx-auto pt-16">
             <h1 className="text-4xl font-bold underline ">About Me</h1>
             <About/>
         </div>
-        <div id="portfolio" className="max-w-5xl mx-auto">
+        <div id="portfolio" className="max-w-5xl mx-auto pt-16">
             <h1 className="text-4xl font-bold underline mb-3">Portfolio</h1>
             <Portfolio/>
         </div>
-        <div id="skills" className="max-w-5xl mx-auto my-24">
+        <div id="skills" className="max-w-5xl mx-auto mb-24 pt-20">
             <h1 className="text-4xl font-bold underline mb-3">Skills</h1>
             <Skills/>
         </div>
-        <div id="contact" className="max-w-5xl mx-auto my-24">
+        <div id="contact" className="max-w-5xl mx-auto mb-24 pt-16">
             <h1 className="text-4xl font-bold underline mb-3">Contact & Send Message</h1>
             <Contact/>
         </div>

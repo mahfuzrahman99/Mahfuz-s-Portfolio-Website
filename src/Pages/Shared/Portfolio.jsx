@@ -60,7 +60,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <div className="md:my-44">
+      <div className="md:my-44 ">
         <div>
           <div className="flex flex-col md:flex-row justify-end gap-2 md:my-8 md:gap-12 items-center">
             <h1 className="text-3xl font-bold md:hidden">Your Dream Coffee</h1>
@@ -110,7 +110,7 @@ const Portfolio = () => {
         </div>
       </div>
       <div>
-        <div>
+        <div className=" md:mb-32">
           <div className="flex flex-col md:flex-row gap-2 md:my-8 md:gap-12 items-center">
             <h1 className="text-3xl font-bold md:mb-4">Automotive Care</h1>
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 mb-3">
