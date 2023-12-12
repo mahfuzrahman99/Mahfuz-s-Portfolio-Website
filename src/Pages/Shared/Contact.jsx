@@ -28,35 +28,6 @@ const Contact = () => {
         });
     };
 
-//   const sendEmail = (e) => {
-//     e.preventDefault();
-//     const form = e.target;
-//     emailjs
-//       .sendForm(
-//         "service_fsiuqse",
-//         "template_k2ek7hd",
-//         form.current,
-//         "_Ry7faN3cOvUnjYMa"
-//       )
-//       .then(
-//         (result) => {
-//           console.log(result.text);
-//           if (result.text) {
-//             Swal.fire({
-//               position: "top",
-//               icon: "success",
-//               title: "Your message has been send",
-//               showConfirmButton: false,
-//               timer: 1500,
-//             });
-//           }
-//         },
-//         (error) => {
-//           console.log(error.text);
-//         }
-//       );
-//   };
-
   return (
     <div>
       <div className="md:grid grid-cols-2">
