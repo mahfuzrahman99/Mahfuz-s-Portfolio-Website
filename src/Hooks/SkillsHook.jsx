@@ -8,7 +8,7 @@ const SkillsHook = ({ shadowColor, textColor, icon, glareColor, name }) => {
       glareEnable={true}
       glareMaxOpacity={0.8}
       glareColor={glareColor}
-      glarePosition="top"
+      glarePosition="bottom"
       glareBorderRadius="20px"
     >
       <div
