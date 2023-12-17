@@ -1,6 +1,6 @@
 .scroll-container {
     overflow: hidden;
-    animation: scroll 40s linear infinite;
+    animation: scroll 25s linear infinite;
     display: flex;
   }
   

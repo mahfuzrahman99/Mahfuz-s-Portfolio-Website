@@ -3,8 +3,8 @@ import { HiArrowDown, HiArrowRight } from "react-icons/hi";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Tilt from "react-parallax-tilt";
-// import "./ParallaxEffect.demozap.scss";
-// import "../Css/banner.css"
+import { PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 const Banner = () => {
   return (
@@ -79,16 +79,16 @@ const Banner = () => {
                 <HiArrowRight />
               </span>
             </a>
-            {/* <a
-            href="https://drive.google.com/uc?export=download&id=15vGf9GraoJfEomiBJqIo57LKhfXmirA7"
-            className="text-xl font-semibold btn btn-outline border-none text-white bg-[#06b6d4] rounded-md hover:bg-[#a6adbb]"
-          >
-            Resume
-            <span className="font-bold">
-              <HiArrowDown />
-            </span>
-          </a> */}
             <a
+              href="https://drive.google.com/uc?export=download&id=1enjY4MvV-kPAV9vZz8er5I14OCK7dWVN"
+              className="text-xl font-semibold btn btn-outline border-none text-white bg-[#06b6d4] rounded-md hover:bg-[#a6adbb]"
+            >
+              Resume
+              <span className="font-bold">
+                <HiArrowDown />
+              </span>
+            </a>
+            {/* <a
               href="/public/resume.pdf"
               download="resume.pdf"
               className="text-xl font-semibold btn btn-outline border-none text-white bg-[#06b6d4] rounded-md hover:bg-[#a6adbb]"
@@ -97,18 +97,20 @@ const Banner = () => {
               <span className="font-bold">
                 <HiArrowDown />
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="flex justify-center w-full col-span-1">
           <Tilt className="parallax-effect" perspective={500}>
-            <div className="inner-element ">
-              <img
-                className="h-[400px] rounded-xl bg-[#a6adbb] shadow-[#a6adbb] shadow-lg"
-                src={bannerImg}
-                alt=""
-              />
-            </div>
+            <PhotoView src={bannerImg}>
+              <div className="inner-element ">
+                <img
+                  className="h-[400px] rounded-xl bg-[#a6adbb] shadow-[#a6adbb] shadow-lg"
+                  src={bannerImg}
+                  alt=""
+                />
+              </div>
+            </PhotoView>
           </Tilt>
         </div>
       </div>
