@@ -121,7 +121,7 @@ const Contact = () => {
             />
             <input
               type="number"
-              name="number"
+              name="user_phone"
               className="p-2 rounded-md w-full mb-2"
               placeholder="Inter Your WhatsApp Number"
             />
