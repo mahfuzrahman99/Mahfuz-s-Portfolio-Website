@@ -1,11 +1,16 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
-// import { Link, NavLink } from "react-router-dom";
-// import Plogo from "../../assets/portfolio-logo.png"
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../AouthProvider";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  // let user = true;
+  const admin = user?.email === "mahfuzurrahmanshabbir@gmail.com";
+  const navigate = useNavigate();
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
   );
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -57,11 +62,31 @@ const Navbar = () => {
           SKILLS
         </a>
       </li>
+      { admin &&  
+      <li>
+        <NavLink
+          to="/owner_Dashboard/allProjects"
+          className="font-bold hover:text-[#47b2f1] hover:font-bold  text-[#47b2f1]"
+        >
+          OWNER PROFILE
+        </NavLink>
+      </li>}
     </>
   );
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        navigate("/login");
+      })
+      .catch(() => {});
+  };
 
   return (
-    <div className="navbar z-50 fixed top-0 bg-black bg-opacity-50 w-full">
+    <div
+      className={`navbar z-50 fixed top-0  ${
+        isDarkTheme ? "bg-black bg-opacity-70" : "bg-white opacity-95"
+      }  w-full`}
+    >
       <div className="navbar-start w-full md:w-1/4">
         <div className="dropdown">
           <label
@@ -164,6 +189,72 @@ const Navbar = () => {
             >
               <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
             </svg>
+          </label>
+        </div>
+
+        
+        <div className="dropdown dropdown-end flex items-center ">
+          {admin ? (
+            <>
+              <div className="dropdown z-10 dropdown-bottom dropdown-end">
+                <motion.figure
+                  tabIndex={0}
+                  animate={{
+                    scale: [1, 1, 1, 1, 1],
+                    rotate: [0, 0, 0, 0, 0],
+                    borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+                  }}
+                  transition={{
+                    duration: 3,
+                    ease: "easeInOut",
+                    times: [0, 0.2, 0.5, 0.8, 1],
+                    repeat: Infinity,
+                    repeatDelay: 1,
+                  }}
+                >
+                  <img
+                    src={user?.photoURL}
+                    className="h-[35px] md:h-[50px] w-[35] md:w-[50px] rounded-full"
+                    alt={user?.displayName ? user?.displayName : "Not Found"}
+                  />
+                </motion.figure>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52 bg-black bg-opacity-60"
+                >
+                  <li>
+                    <a className="text-[#47b2f1]">
+                      {user?.displayName ? "Mahfuzur Rahman" : "Mahfuzur Rahman"}
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <motion.button
+                        initial={{ scale: 0 }}
+                        animate={{ rotate: 360, scale: 1 }}
+                        transition={{
+                          ease: "linear",
+                          duration: 0.5,
+                          x: { duration: 0.5 },
+                        }}
+                        onClick={handleLogout}
+                        className=" btn-sm border-none btn-outline rounded-md font-semibold uppercase hover:bg-transparent  text-[#47b2f1]"
+                      >
+                        Logout
+                      </motion.button>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
+          <label
+            tabIndex={0}
+            className="btn btn-outline btn-circle border-none hover:bg-transparent avatar"
+          >
+            
           </label>
         </div>
       </div>

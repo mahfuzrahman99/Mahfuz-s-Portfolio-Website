@@ -11,16 +11,28 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@tanstack/react-query": "^5.17.19",
+    "axios": "^1.6.6",
+    "dotenv": "^16.4.1",
     "emailjs-com": "^3.2.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.2",
+    "framer-motion": "^11.0.3",
+    "jsonwebtoken": "^9.0.2",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
+    "mongodb": "^6.3.0",
+    "nodemon": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.49.3",
     "react-icons": "^4.12.0",
     "react-parallax-tilt": "^1.7.176",
     "react-photo-view": "^1.2.3",
     "react-router-dom": "^6.20.1",
+    "react-tooltip": "^5.26.0",
     "sort-by": "^1.2.0",
+    "sweetalert": "^2.1.2",
     "sweetalert2": "^11.10.1"
   },
   "devDependencies": {
@@ -36,5 +48,10 @@
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
     "vite": "^5.0.0"
-  }
+  },
+  "description": "- **Live Link:** [Mahfuz's Portfolio](https://portfolio-of-mahfuz-99.surge.sh/)",
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

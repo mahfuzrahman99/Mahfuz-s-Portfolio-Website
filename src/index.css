@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scroll-container {
+    width: 330px;
+    height: 275px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .scroll-container.img-scrolling img {
+    animation: scroll 25s linear infinite;
+  }
+  
+  @keyframes scroll {
+    10%, 100% {
+      transform: translateY(0);
+    }
+  
+    25% {
+      transform: translateY(-25%);
+    }
+  
+    50% {
+      transform: translateY(-50%);
+    }
+  
+    75% {
+      transform: translateY(-75%);
+    }
+  }
