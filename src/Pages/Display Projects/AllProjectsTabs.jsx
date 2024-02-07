@@ -21,32 +21,42 @@ const AllProjectsTabs = () => {
     setActive(id);
   };
 
-  
-
-  const tabWidthPercentage = active === 0 ? 105 / tablist.length : active === 2 ? 98 / tablist.length : 99 / tablist.length;
-
+  const tabWidthPercentage =
+    active === 0
+      ? 105 / tablist.length
+      : active === 2
+      ? 98 / tablist.length
+      : 99 / tablist.length;
 
   return (
     <>
-      <div role="tablist" className="tabs bg-slate-200 p-3  rounded-md relative">
+      <div
+        role="tablist"
+        className="tabs bg-slate-200 p-1 md:p-3  rounded-md relative"
+      >
         {tablist.map((tab) => (
           <a
             onClick={() => handleTabs(tab.id)}
             key={tab.id}
             role="tab"
-            className={`tab z-20 font-semibold text-black ${active === tab.id ? "rounded-md bg-transparent" : ""} `}
+            className={`text-[8px]  md:text-base tab z-20 font-extrabold md:font-semibold text-black ${
+              active === tab.id ? "rounded-md bg-transparent" : ""
+            } `}
           >
             {tab.label}
           </a>
         ))}
         <div
-          className="absolute bottom-0 z-10 rounded-md shadow-xl ml-1 bg-[#50b6f2] text-black transition-all duration-700 h-[80%] top-[10%]"
-          style={{ left: `${tabWidthPercentage * active}%`, width: `${tabWidthPercentage}%` }}
+          className="absolute bottom-0 z-10 rounded-md shadow-2xl ml-1 bg-[#50b6f2] text-black transition-all duration-700 h-[80%] top-[10%]"
+          style={{
+            left: `${tabWidthPercentage * active}%`,
+            width: `${tabWidthPercentage}%`,
+          }}
         ></div>
       </div>
-      {
-        tablist.map(tab => tab.id === active ? tab.component : "")
-      }
+      <div>
+        {tablist.map((tab) => (tab.id === active ? tab.component : ""))}
+      </div>
     </>
   );
 };

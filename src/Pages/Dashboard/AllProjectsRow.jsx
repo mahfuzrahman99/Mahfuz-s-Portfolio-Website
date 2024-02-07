@@ -35,6 +35,7 @@ const AllProjectsRow = ({ project, i, refetch }) => {
     if (confirmed.isConfirmed) {
       try {
         const res = await axiosPublic.delete(`/projects/${id}`);
+        console.log("console log from hare", res.data)
         if (res.data.deletedCount > 0) {
           refetch();
           Swal.fire({

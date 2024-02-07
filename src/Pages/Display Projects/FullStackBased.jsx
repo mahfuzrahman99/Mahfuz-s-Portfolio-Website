@@ -5,7 +5,7 @@ const FullStackBased = () => {
   const [projects] = useFetchProjects();
 
   const FilteredProject = projects.filter(
-    (project) => project.category === "full_stack_based"
+    (project) => project?.category === "full_stack_based"
   );
 
   return (

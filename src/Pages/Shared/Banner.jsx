@@ -53,15 +53,15 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto md:grid grid-cols-2 gap-3 my-12 relative">
-        <div className=" my-auto col-span-1 text-left space-y-3 md:p-0 p-4">
+      <div className="max-w-5xl mx-auto flex flex-col-reverse md:grid grid-cols-2 gap-3 mt-12 relative">
+        <div className=" my-auto col-span-1 text-left space-y-3 md:p-1 p-4">
           <h1 className="text-3xl md:text-6xl font-bold">
-            I am a{" "}
+            I am a
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
               Front End Developer
             </span>
           </h1>
-          <p>
+          <p className="text-justify">
             Greetings! I am Mahfuzur Rahman Shabbir, a skilled MERN stack
             developer and front-end specialist. With expertise in crafting
             visually appealing websites, I excel at translating ideas into
@@ -100,12 +100,12 @@ const Banner = () => {
             </a> */}
           </div>
         </div>
-        <div className="flex justify-center w-full col-span-1">
+        <div className="flex justify-center w-full col-span-1 mt-6 md:mt-0">
           <Tilt className="parallax-effect" perspective={500}>
             <PhotoView src={bannerImg}>
               <div className="inner-element ">
                 <img
-                  className="h-[400px] rounded-xl bg-[#a6adbb] shadow-[#a6adbb] shadow-lg"
+                  className="md:h-[400px] h-[300px] rounded-xl bg-[#a6adbb] shadow-[#a6adbb] shadow-lg"
                   src={bannerImg}
                   alt=""
                 />

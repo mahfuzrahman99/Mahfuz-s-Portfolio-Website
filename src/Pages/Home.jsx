@@ -13,18 +13,18 @@ import Skills from "./Skills";
 
 const Home = () => {
   return (
-    <>
+    <div className="p-1 md:p-0">
       <div className="">
         <Navbar />
       </div>
       <div>
         <Banner />
       </div>
-      <div id="about" className="max-w-5xl mx-auto pt-16">
+      <div id="about" className="max-w-5xl mx-auto pt-6 md:pt-16">
         <h1 className="text-4xl font-bold underline ">About Me</h1>
         <About />
       </div>
-      <div id="portfolio" className="max-w-5xl mx-auto pt-16">
+      <div id="portfolio" className="max-w-5xl mx-auto pt-6 md:pt-16">
         <h1 className="text-4xl font-bold underline mb-3">Portfolio</h1>
         <AllProjectsTabs />
       </div>
@@ -57,7 +57,7 @@ const Home = () => {
       <div>
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -6,12 +6,12 @@ const VanillaCSSBased = () => {
   const [projects] = useFetchProjects();
 
   const FilteredProject = projects.filter(
-    (project) => project.category === "vanilla_css_based"
+    (project) => project?.category === "vanilla_css_based"
   );
 
   return (
     <div>
-        <div className="md:grid grid-cols-3 ">
+        <div className="md:grid grid-cols-3 gap-1">
         {FilteredProject.map((project) => (
           <PortfolioCardDesign
             key={project._id}

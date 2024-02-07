@@ -10,7 +10,7 @@
   }
   
   .scroll-container.img-scrolling img {
-    animation: scroll 25s linear infinite;
+    animation: scroll 15s linear infinite;
   }
   
   @keyframes scroll {

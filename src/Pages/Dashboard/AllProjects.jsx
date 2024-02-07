@@ -23,7 +23,7 @@ const AllProjects = () => {
 // console.log( houses)
   return (
     <div>
-      <div className="flex justify-between m-10">
+      <div className="flex justify-between m-3 md:m-10">
         <div>
           <button
             onClick={() => setShowModal(true)}

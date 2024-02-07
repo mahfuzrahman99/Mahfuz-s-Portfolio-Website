@@ -76,7 +76,7 @@ const Navbar = () => {
   const handleLogout = () => {
     logOut()
       .then(() => {
-        navigate("/login");
+        navigate("/");
       })
       .catch(() => {});
   };

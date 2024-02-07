@@ -17,7 +17,7 @@ const PortfolioCardDesign = ({
   ServerCode,
 }) => {
   const { user } = useContext(AuthContext);
-  const admin = user.email === "mahfuzurrahmanshabbir@gmail.com";
+  const admin = user?.email === "mahfuzurrahmanshabbir@gmail.com";
   const [isScrolling, setIsScrolling] = useState(false);
 //   const [showModal, setShowModal] = useState(false);
 //   const [project] = useFetchProjects();
@@ -31,7 +31,7 @@ const PortfolioCardDesign = ({
   };
 
   return (
-    <div className="my-3">
+    <div className="mt-3">
       <div className="bg-[#e2e8f0] rounded-t-md">
         <h1 className="text-lg font-semibold  text-center text-black p-1">
           {ProjectName}
@@ -42,7 +42,7 @@ const PortfolioCardDesign = ({
               <div
                 className="text-xl "
                 data-tooltip-id="my-tooltip"
-                data-tooltip-content="View Details"
+                data-tooltip-content="Project Overview"
               >
                 <FaRegEye />
               </div>
@@ -106,7 +106,7 @@ const PortfolioCardDesign = ({
           </div>
         </div>
       </div>
-      {/* first div */}
+
       <div
         className={`scroll-container mx-auto ${
           isScrolling ? "img-scrolling" : ""
@@ -114,7 +114,7 @@ const PortfolioCardDesign = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <img src={backgroundImage} alt="" />
+        <img className="" src={backgroundImage} alt="" />
       </div>
       <Tooltip id="my-tooltip" />
     </div>

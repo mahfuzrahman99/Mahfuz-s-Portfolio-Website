@@ -35,9 +35,10 @@ const UpdateProject = ({ showModal, setShowModal, project, refetch }) => {
       GitHub_Server_Side_Link: data.GitHub_Server_Side_Link,
       category: data.category,
     };
-
+  //  console.log(projectItem)
     const projectRes = await axiosPublic.patch(`/projects/${_id}`, projectItem);
-    if (projectRes.data.modifiedCount > 0) {
+    console.log("console from patch request", projectRes.data)
+    if (projectRes.data.modifiedCount) {
       reset();
       refetch();
       Swal.fire({
