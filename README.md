@@ -26,11 +26,9 @@ _Client:_ React, TailwindCSS,
 4. **Project Links and Repositories:**
    - Provide direct links to live projects and GitHub repositories for each showcased work. This feature allows visitors to explore your projects in-depth, review the codebase, and experience your applications in real-time.
 5. **Social Media Integration:**
-
    - Seamlessly share your artistic achievements with the world by integrating social media platforms. Instantly showcase your latest creations, garner feedback, and expand your artistic presence across various online communities.
 
 6. **Collaborative Projects:**
-
    - Foster creativity by collaborating with other artists on joint projects. This feature facilitates real-time collaboration, allowing multiple artists to contribute to a single artwork, promoting teamwork, and expanding the possibilities of artistic expression..
 
 7. **Responsive UI Crafting:**
