@@ -80,7 +80,7 @@ const Banner = () => {
               </span>
             </a>
             <a
-              href="https://drive.google.com/uc?export=download&id=1enjY4MvV-kPAV9vZz8er5I14OCK7dWVN"
+              href="https://drive.google.com/uc?export=download&id=1wtPSU6xnIOK0AmuZJKKWEYI3D-6N6WrY"
               className="text-xl font-semibold btn btn-outline border-none text-white bg-[#06b6d4] rounded-md hover:bg-[#a6adbb]"
             >
               Resume
