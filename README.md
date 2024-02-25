@@ -33,4 +33,4 @@ _Client:_ React, TailwindCSS,
 7. **Responsive UI Crafting:**
    -Versatile Junior Frontend Developer excelling in React and Tailwind CSS. Specialized in designing dynamic and responsive user interfaces for seamless digital experiences.
 
-<img alt="Mahfuz's Portfolio" src="https://i.ibb.co/VTvDrGs/screencapture-portfolio-of-mahfuz-99-surge-sh-2023-12-12-07-51-33.png"/>
+<img alt="Mahfuz's Portfolio" src="https://i.ibb.co/tPNCffQ/screencapture-portfolio-of-mahfuz-99-surge-sh-2024-02-25-21-25-21-min.png"/>
