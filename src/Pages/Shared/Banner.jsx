@@ -14,7 +14,7 @@ const Banner = () => {
           <div className="group">
             <a
               href="https://www.linkedin.com/in/mahfuzur-rahman-shabbir-0496752a4/"
-              className="px-2 flex gap-1 items-center transform transition-transform duration-300 group-hover:flex-none group-hover:-translate-x-2 "
+              className="px-2 flex gap-1 items-center transform transition-transform duration-1000 group-hover:flex-none group-hover:-translate-x-2 "
             >
               <p className="group-hover:flex hidden text-2xl  font-bold">
                 LinkedIn
@@ -27,7 +27,7 @@ const Banner = () => {
           <div className="group">
             <a
               href="https://github.com/mahfuzrahman99"
-              className="px-2 flex gap-1 items-center transform transition-transform duration-300 group-hover:flex-none group-hover:-translate-x-2"
+              className="px-2 flex gap-1 items-center transform transition-transform duration-1000 group-hover:flex-none group-hover:-translate-x-2"
             >
               <p className="group-hover:flex hidden text-2xl font-bold">
                 Github
@@ -37,7 +37,7 @@ const Banner = () => {
               </p>
             </a>
           </div>
-          <div className="group transition-all duration-600">
+          <div className="group transition-all duration-1000">
             <a
               href="mailto:mahfuzurrahmanshabbir@gmail.com"
               className="px-2 flex gap-1 items-center group-hover:flex-none group-hover:-translate-x-2"
@@ -88,16 +88,6 @@ const Banner = () => {
                 <HiArrowDown />
               </span>
             </a>
-            {/* <a
-              href="/public/resume.pdf"
-              download="resume.pdf"
-              className="text-xl font-semibold btn btn-outline border-none text-white bg-[#06b6d4] rounded-md hover:bg-[#a6adbb]"
-            >
-              Resume
-              <span className="font-bold">
-                <HiArrowDown />
-              </span>
-            </a> */}
           </div>
         </div>
         <div className="flex justify-center w-full col-span-1 mt-6 md:mt-0">
