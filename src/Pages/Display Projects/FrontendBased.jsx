@@ -5,21 +5,21 @@ const FrontendBased = () => {
 
   const [projects] = useFetchProjects();
 
-  const FilteredProject = projects.filter(
+  const FilteredProject = projects?.filter(
     (project) => project?.category === "frontend_based"
   );
 
   return (
     <div>
         <div className="md:grid grid-cols-3 gap-1">
-        {FilteredProject.map((project) => (
+        {FilteredProject?.map((project) => (
           <PortfolioCardDesign
-            key={project._id}
-            ProjectName={project.projectName}
-            backgroundImage={project.full_Screen_Shot}
-            LiveLink={project.Live_Link}
-            ClientCode={project.GitHub_Client_Side_Link}
-            ServerCode={project.GitHub_Server_Side_Link}
+            key={project?._id}
+            ProjectName={project?.projectName}
+            backgroundImage={project?.full_Screen_Shot}
+            LiveLink={project?.Live_Link}
+            ClientCode={project?.GitHub_Client_Side_Link}
+            ServerCode={project?.GitHub_Server_Side_Link}
           />
         ))}
       </div>

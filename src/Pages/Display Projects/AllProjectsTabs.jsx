@@ -34,7 +34,7 @@ const AllProjectsTabs = () => {
         role="tablist"
         className="tabs bg-slate-200 p-1 md:p-3  rounded-md relative"
       >
-        {tablist.map((tab) => (
+        {tablist?.map((tab) => (
           <a
             onClick={() => handleTabs(tab.id)}
             key={tab.id}
@@ -55,7 +55,7 @@ const AllProjectsTabs = () => {
         ></div>
       </div>
       <div>
-        {tablist.map((tab) => (tab.id === active ? tab.component : ""))}
+        {tablist?.map((tab) => (tab.id === active ? tab.component : ""))}
       </div>
     </>
   );

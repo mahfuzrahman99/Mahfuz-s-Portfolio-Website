@@ -13,7 +13,7 @@ const AllProjects = () => {
     const enteredSearchValue = e.target.search.value.toLowerCase();
     e.target.reset();
 
-    const filteredHouse = projects.filter(
+    const filteredHouse = projects?.filter(
       (house) => house.projectName.toLowerCase() === enteredSearchValue
     );
 

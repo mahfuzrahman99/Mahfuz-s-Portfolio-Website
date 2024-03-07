@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AouthProvider";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
   }, [theme]);
 
   const handleToggle = (e) => {
-    if (e.target.checked) {
+    if (e?.target.checked) {
       setTheme("dark");
     } else {
       setTheme("light");
