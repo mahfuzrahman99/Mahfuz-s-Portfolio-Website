@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Tilt from "react-parallax-tilt";
 
-const SkillsCard = ({ glrColor, shadColor, textColor, icon }) => {
+const SkillsCard = ({ glrColor, shadColor, textColor, icon, title }) => {
   return (
     <>
       <Tilt
@@ -21,7 +21,7 @@ const SkillsCard = ({ glrColor, shadColor, textColor, icon }) => {
           >
             {icon}
           </div>
-          <h1 className="mb-2 font-medium">HTML</h1>
+          <h1 className="mb-2 font-medium">{title}</h1>
         </div>
       </Tilt>
     </>
