@@ -3,11 +3,13 @@ import { FaCss3, FaHtml5, FaNode, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTailwindcss, SiExpress, SiFirebase } from "react-icons/si";
 import { BiLogoMongodb } from "react-icons/bi";
+import SkillsCard from "../Components/SkillsCard";
 
 const Skills = () => {
   return (
     <div className="md:grid grid-cols-3 gap-3 text-white md:gap-5">
-      <Tilt
+      <SkillsCard glrColor={"#f16529"} shadColor={"#f16529"} textColor={"#f16529"} icon={<FaHtml5 />}/>
+      {/* <Tilt
         glareEnable={true}
         glareMaxOpacity={0.8}
         glareColor="#f16529"
@@ -24,11 +26,12 @@ const Skills = () => {
           </div>
           <h1 className="mb-2 font-medium">HTML</h1>
         </div>
-      </Tilt>
-      <Tilt
+      </Tilt> */}
+      <SkillsCard glrColor={"#039be5"} shadColor={"#039be5"} textColor={"#039be5"} icon={<FaHtml5 />}/>
+      {/* <Tilt
         glareEnable={true}
         glareMaxOpacity={0.8}
-        glareColor="#039be5"
+        glareColor=""
         glarePosition="bottom"
         glareBorderRadius="20px"
       >
@@ -42,7 +45,7 @@ const Skills = () => {
           </div>
           <h1 className="mb-2 font-medium">CSS</h1>
         </div>
-      </Tilt>
+      </Tilt> */}
       <Tilt
         glareEnable={true}
         glareMaxOpacity={0.8}
