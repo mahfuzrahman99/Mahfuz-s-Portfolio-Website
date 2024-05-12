@@ -135,7 +135,7 @@ const Contact = () => {
             ></textarea>
             <input
               type="submit"
-              className="btn btn-outline border-none hover:text-white hover:bg-[#47b2f1] bg-[#47b2f1] text-xl font-semibold text-white p-2 rounded-md"
+              className="btn btn-outline border-none hover:text-white hover:bg-[#47b2f1] bg-[#47b2f1] text-xl font-semibold text-white p-2 rounded-md cursor-pointer"
               value="Send Message"
             />
           </form>
