@@ -6,6 +6,7 @@ import { Tooltip } from "react-tooltip";
 import { AuthContext } from "../../Pages/AouthProvider";
 import { FaEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 // import UpdateProject from "../../Pages/Dashboard/UpdateProject";
 // import useFetchProjects from "../../Hooks/useFetchProjects";
 
@@ -19,8 +20,8 @@ const PortfolioCardDesign = ({
   const { user } = useContext(AuthContext);
   const admin = user?.email === "mahfuzurrahmanshabbir@gmail.com";
   const [isScrolling, setIsScrolling] = useState(false);
-//   const [showModal, setShowModal] = useState(false);
-//   const [project] = useFetchProjects();
+  //   const [showModal, setShowModal] = useState(false);
+  //   const [project] = useFetchProjects();
 
   const handleMouseEnter = () => {
     setIsScrolling(true);
@@ -28,6 +29,16 @@ const PortfolioCardDesign = ({
 
   const handleMouseLeave = () => {
     setIsScrolling(false);
+  };
+
+  const handleProjectOverview = () => {
+    Swal.fire({
+      position: "top",
+      icon: "warning",
+      title: `This features is under development`,
+      showConfirmButton: false,
+      timer: 2000,
+    });
   };
 
   return (
@@ -40,7 +51,8 @@ const PortfolioCardDesign = ({
           <div className="flex justify-center items-center text-black ">
             <div className="flex justify-center gap-6 items-center mb-2">
               <div
-                className="text-xl "
+                onClick={handleProjectOverview}
+                className="text-xl cursor-pointer"
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content="Project Overview"
               >
@@ -70,16 +82,16 @@ const PortfolioCardDesign = ({
               </div>
               {
                 <div>
-                <a
-                  href={`${ServerCode}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-tooltip-id="my-tooltip"
-                  data-tooltip-content="Server Code"
-                >
-                  <FaCode />
-                </a>
-              </div>
+                  <a
+                    href={`${ServerCode}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="Server Code"
+                  >
+                    <FaCode />
+                  </a>
+                </div>
               }
               {admin ? (
                 <div>
