@@ -71,7 +71,7 @@ const UpdateProject = ({ showModal, setShowModal, project, refetch }) => {
               <div className="max-w-3xl w-full bg-gray-200 p-8 rounded shadow-lg">
                 <div className="md:grid grid-cols-2 gap-2">
                   <h2 className="text-2xl font-semibold mb-6 text-center text-[#00938a] col-span-2">
-                    Update Home
+                    Update Project
                   </h2>
 
                   {/* Project Name */}
