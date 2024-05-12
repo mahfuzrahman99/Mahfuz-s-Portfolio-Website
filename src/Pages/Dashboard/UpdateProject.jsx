@@ -41,6 +41,7 @@ const UpdateProject = ({ showModal, setShowModal, project, refetch }) => {
     if (projectRes.data.modifiedCount) {
       reset();
       refetch();
+      setShowModal(false)
       Swal.fire({
         position: "top",
         icon: "success",

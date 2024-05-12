@@ -33,6 +33,7 @@ const AddProject = ({ showModal, setShowModal }) => {
     if (houseRes.data.insertedId) {
       // show success popup
       reset();
+      setShowModal(false)
       Swal.fire({
         position: "top",
         icon: "success",
