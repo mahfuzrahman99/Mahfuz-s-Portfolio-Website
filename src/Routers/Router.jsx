@@ -5,6 +5,7 @@ import Register from "../Pages/Register";
 import MainLayout from "../Layouts/MainLayout";
 import OwnerDashboard from "../Layouts/OwnerDashboard";
 import AllProjects from "../Pages/Dashboard/AllProjects";
+import AllCredentials from "../Pages/Dashboard/Credentials/AllCredentials";
 
 const router = createBrowserRouter([
     {
@@ -14,10 +15,7 @@ const router = createBrowserRouter([
         {
           path:"/",
           element:<Home/>,
-        },
-        {},
-        {},
-        {},
+        }
       ]
     },
     {
@@ -27,6 +25,10 @@ const router = createBrowserRouter([
         {
           path:"allProjects",
           element:<AllProjects/>,
+        },
+        {
+          path:"allCredentials",
+          element:<AllCredentials/>,
         },
       ]
     },

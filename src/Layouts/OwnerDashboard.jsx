@@ -24,6 +24,20 @@ const OwnerDashboard = () => {
                     ALL Projects
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink
+                    to="/owner_Dashboard/allCredentials"
+                    className={({ isActive, isPending }) =>
+                      isPending
+                        ? "pending"
+                        : isActive
+                        ? "text-[#FFCC00] hover:text-[ff4a4a] hover:font-bold underline font-bold"
+                        : "font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
+                    }
+                  >
+                    ALL Credentials
+                  </NavLink>
+                </li>
                 <div className="divider"></div>
                 <li>
                   <NavLink
@@ -61,7 +75,7 @@ const OwnerDashboard = () => {
           <ul className="">
             {/* Sidebar content here */}
             <div className="w-50 min-h-screen md:hidden bg-[#00938a]">
-            <ul className="menu p-4">
+              <ul className="menu p-4">
                 <li>
                   <NavLink
                     to="/owner_Dashboard/allProjects"
@@ -74,6 +88,20 @@ const OwnerDashboard = () => {
                     }
                   >
                     ALL Projects
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/owner_Dashboard/allCredentials"
+                    className={({ isActive, isPending }) =>
+                      isPending
+                        ? "pending"
+                        : isActive
+                        ? "text-[#FFCC00] hover:text-[ff4a4a] hover:font-bold underline font-bold"
+                        : "font-bold hover:text-[#fafafa] hover:font-bold  text-[#fafafa]"
+                    }
+                  >
+                    ALL Credentials
                   </NavLink>
                 </li>
                 <div className="divider"></div>
