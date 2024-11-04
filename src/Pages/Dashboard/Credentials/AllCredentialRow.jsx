@@ -33,7 +33,7 @@ const AllCredentialRow = ({ credential, i, refetch }) => {
 
     if (confirmed.isConfirmed) {
       try {
-        const res = await axiosPublic.delete(`/projects/${id}`);
+        const res = await axiosPublic.delete(`/credentials/${id}`);
         console.log("console log from hare", res.data);
         if (res.data.deletedCount > 0) {
           refetch();
@@ -56,7 +56,7 @@ const AllCredentialRow = ({ credential, i, refetch }) => {
   return (
     <>
       <tr className="bg-gray-100 text-xs text-black font-semibold">
-        <td className="py-2 px-4 border-b-4">{i}</td>
+        <td className="py-2 px-4 border-b-4">{i + 1}</td>
         <td className="py-2 px-4 border-b-4">{credential_Name}</td>
         <td className="py-2 px-4 border-b-4">{credential_Email}</td>
         <td className="py-2 px-4 border-b-4">{credential_phone}</td>

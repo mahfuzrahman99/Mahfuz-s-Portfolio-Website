@@ -6,7 +6,7 @@ import AddProject from "./AddProject";
 const AllProjects = () => {
   const [showModal, setShowModal] = useState(false);
   const [searchedHouse, setSearchedHouse] = useState()
-  const [projects, refetch] = useFetchProjects()
+  const [projects, refetch] = useFetchProjects() || [];
   
   const handleSearchBlog = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const AllProjects = () => {
     setSearchedHouse(filteredHouse);
   };
   const projectsToDisplay = searchedHouse?.length ? searchedHouse : projects;
-// console.log( houses)
+// console.log(typeof(projectsToDisplay))
   return (
     <div>
       <div className="flex justify-between m-3 md:m-10">

@@ -1,30 +1,39 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AllCredentialsToDisplay from "./AllCredentialsToDisplay";
 import AddCredential from "./AddCredential";
+import useFetchCredentials from "../../../Hooks/useFetchCredentials";
 
 const AllCredentials = () => {
-  const [datas, setDatas] = useState([]);
+  // const [datas, setDatas] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [searchedCredential, setSearchedCredential] = useState();
-  useEffect(() => {
-    fetch("/credentials.json")
-      .then((res) => res.json())
-      .then((data) => setDatas(data));
-  }, []);
+  const [credentials, refetch] = useFetchCredentials() || [];
+
+  // useEffect(() => {
+  //   fetch("/credentials.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setDatas(data));
+  // }, []);
 
   const handleSearchCredential = (e) => {
     e.preventDefault();
     const enteredSearchValue = e.target.search.value.toLowerCase();
     e.target.reset();
 
-    const filteredCredential = datas?.filter(
+    const filteredCredential = credentials?.filter(
       (data) => data.projectName.toLowerCase() === enteredSearchValue
     );
 
-    setSearchedCredential(filteredCredential);
+    setSearchedCredential(filteredCredential || []);
   };
-  const credentialsToDisplay = searchedCredential?.length ? searchedCredential : datas;
-  // console.log(datas)
+  // const credentialsToDisplay = searchedCredential?.length ? searchedCredential : credentials;
+  // Always default to an empty array if credentialsToDisplay is undefined
+  const credentialsToDisplay =
+    Array.isArray(searchedCredential) && searchedCredential.length
+      ? searchedCredential
+      : Array.isArray(credentials)
+      ? credentials
+      : [];
   return (
     <div>
       <div className="flex justify-between m-3 md:m-10">
@@ -35,7 +44,11 @@ const AllCredentials = () => {
           >
             ADD A Credential
           </button>
-          <AddCredential showModal={showModal} setShowModal={setShowModal} />
+          <AddCredential
+            showModal={showModal}
+            setShowModal={setShowModal}
+            refetch={refetch}
+          />
         </div>
         <div>
           <form onSubmit={handleSearchCredential} className="join">
@@ -53,7 +66,7 @@ const AllCredentials = () => {
       </div>
       <div>
         <AllCredentialsToDisplay
-          // refetch={refetch}
+          refetch={refetch}
           credentialsToDisplay={credentialsToDisplay}
         />
       </div>

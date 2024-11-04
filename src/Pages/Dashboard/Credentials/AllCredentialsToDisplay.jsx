@@ -4,8 +4,8 @@ import { AuthContext } from "../../AouthProvider";
 import AllCredentialRow from "./AllCredentialRow";
 
 const AllCredentialsToDisplay = ({ credentialsToDisplay, refetch }) => {
-    const { user } = useContext(AuthContext);
-    console.log(credentialsToDisplay)
+  const { user } = useContext(AuthContext);
+  console.log(credentialsToDisplay);
 
   return (
     <div className="max-w-5xl mx-auto w-[300px] md:w-auto">
@@ -40,14 +40,15 @@ const AllCredentialsToDisplay = ({ credentialsToDisplay, refetch }) => {
             </thead>
             {user?.email === "mahfuzurrahmanshabbir@gmail.com" ? (
               <tbody>
-                {credentialsToDisplay?.map((credential, i) => (
-                  <AllCredentialRow
-                    key={credential.id}
-                    credential={credential}
-                    refetch={refetch}
-                    i={i}
-                  />
-                ))}
+                {Array.isArray(credentialsToDisplay) &&
+                  credentialsToDisplay.map((credential, i) => (
+                    <AllCredentialRow
+                      key={credential._id}
+                      credential={credential}
+                      refetch={refetch}
+                      i={i}
+                    />
+                  ))}
               </tbody>
             ) : (
               ""

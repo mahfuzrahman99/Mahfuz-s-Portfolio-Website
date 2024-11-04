@@ -15,7 +15,7 @@ const UpdateCredential = ({ showModal, setShowModal, credential, refetch }) => {
     formState: { errors },
   } = useForm();
   const {
-    credential_id,
+    _id,
     credential_Name,
     credential_Email,
     credential_phone,
@@ -24,20 +24,20 @@ const UpdateCredential = ({ showModal, setShowModal, credential, refetch }) => {
   } = credential || {};
 
   const onSubmit = async (data) => {
-    const projectItem = {
+    const credentialItem = {
       credential_Name: data.credential_Name,
       credential_Email: data.credential_Email,
       credential_phone: data.credential_phone,
       credential_Screen_Shot: data.credential_Screen_Shot,
       credential_Password: data.credential_Password,
     };
-    //  console.log(projectItem)
-    const projectRes = await axiosPublic.patch(
-      `/projects/${credential_id}`,
-      projectItem
+    //  console.log(credentialItem)
+    const credentialRes = await axiosPublic.patch(
+      `/credentials/${_id}`,
+      credentialItem
     );
-    console.log("console from patch request", projectRes.data);
-    if (projectRes.data.modifiedCount) {
+    console.log("console from patch request", credentialRes);
+    if (credentialRes.data.modifiedCount) {
       reset();
       refetch();
       setShowModal(false);
@@ -48,12 +48,12 @@ const UpdateCredential = ({ showModal, setShowModal, credential, refetch }) => {
         showConfirmButton: false,
         timer: 1500,
       });
-      navigate("/owner_Dashboard/allProjects");
+      navigate("/owner_Dashboard/allCredentials");
     } else {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Failed to update the project. Please try again.",
+        text: "Failed to update the credential. Please try again.",
       });
     }
   };
@@ -95,7 +95,7 @@ const UpdateCredential = ({ showModal, setShowModal, credential, refetch }) => {
                   {/* Full Image URL */}
                   <div className="mb-4 col-span-1">
                     <label className="block text-gray-700">
-                      Credential Image URL:
+                      Credential Email:
                     </label>
                     <input
                       className="w-full bg-white p-2 rounded-md mt-1"

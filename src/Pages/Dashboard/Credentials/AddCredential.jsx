@@ -5,11 +5,11 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 
-const AddCredential = ({ showModal, setShowModal }) => {
+const AddCredential = ({ showModal, setShowModal, refetch }) => {
   const {
     handleSubmit,
     register,
-    // reset,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -26,14 +26,17 @@ const AddCredential = ({ showModal, setShowModal }) => {
       credential_Password: data.credential_Password,
       credential_Screen_Shot: data.credential_Screen_Shot,
     };
-    const credentialRes = await axiosPublic.post("/credentials", credentialItem);
-    // console.log(credentialRes.data.credential_Name);
-    console.log("console from outside")
+    console.log("Form data being submitted:", data);
+    const credentialRes = await axiosPublic.post(
+      "/credentials",
+      credentialItem
+    );
+    console.log("Response from backend:", credentialRes);
     if (credentialRes.data) {
-      console.log("console from inside");
       // show success popup
-      // reset();
-      // setShowModal(false);
+      refetch();
+      reset();
+      setShowModal(false);
       Swal.fire({
         position: "top",
         icon: "success",
