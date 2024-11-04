@@ -39,7 +39,7 @@ const AllCredentialRow = ({ credential, i, refetch }) => {
           refetch();
           Swal.fire({
             title: "Deleted!",
-            text: `${credential?.credentialName} has been delete from projects lists.`,
+            text: `${credential?.credentialName} has been delete from projects lists`,
             icon: "success",
           });
         }
