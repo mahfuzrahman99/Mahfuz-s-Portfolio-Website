@@ -2,13 +2,14 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AouthProvider";
 import AllCredentialRow from "./AllCredentialRow";
+import Skeleton from "react-loading-skeleton";
 
 const AllCredentialsToDisplay = ({ credentialsToDisplay, refetch }) => {
   const { user } = useContext(AuthContext);
   console.log(credentialsToDisplay);
 
   return (
-    <div className="max-w-5xl mx-auto w-[300px] md:w-auto">
+    <div className="max-w-6xl mx-auto w-[300px] md:w-auto shadow-xl">
       <div className="bg-gray-100 p-4 overflow-x-auto">
         <h1 className="text-xl md:text-3xl mb-2 font-bold text-black">
           Total Credentials:{" "}
@@ -39,17 +40,23 @@ const AllCredentialsToDisplay = ({ credentialsToDisplay, refetch }) => {
               </tr>
             </thead>
             {user?.email === "mahfuzurrahmanshabbir@gmail.com" ? (
-              <tbody>
-                {Array.isArray(credentialsToDisplay) &&
-                  credentialsToDisplay.map((credential, i) => (
-                    <AllCredentialRow
-                      key={credential._id}
-                      credential={credential}
-                      refetch={refetch}
-                      i={i}
-                    />
-                  ))}
-              </tbody>
+              <>
+                {credentialsToDisplay.length ? (
+                  <tbody>
+                    {Array.isArray(credentialsToDisplay) &&
+                      credentialsToDisplay?.map((credential, i) => (
+                        <AllCredentialRow
+                          key={credential._id}
+                          credential={credential}
+                          refetch={refetch}
+                          i={i}
+                        />
+                      ))}
+                  </tbody>
+                ) : (
+                  <Skeleton count={credentialsToDisplay.length} />
+                )}
+              </>
             ) : (
               ""
             )}

@@ -27,7 +27,7 @@ const AllProjects = () => {
         <div>
           <button
             onClick={() => setShowModal(true)}
-            className="btn btn-ghost bg-[#00938a] text-white p-2 rounded-md"
+            className="btn btn-ghost bg-[#00938a] hover:bg-[#00938a] shadow-xl text-white p-2 rounded-md"
           >
             ADD A PROJECT
           </button>
@@ -38,17 +38,23 @@ const AllProjects = () => {
             <input
               type="text"
               name="search"
-              className="hover:border-none px-5 join-item"
+              className="hover:border-none px-5 join-item bg-[#fff] shadow-xl outline-none"
               placeholder="Search a project..."
             />
-            <button className="btn join-item rounded-r-md bg-[#00938a] text-white p-2">
+            <button className="btn join-item rounded-r-md bg-[#00938a] hover:bg-[#00938a] border-none text-white p-2">
               SEARCH
             </button>
           </form>
         </div>
       </div>
       <div>
-        <AllProjectsToDisplay refetch={refetch} projectsToDisplay={projectsToDisplay}/>
+        {
+
+        <AllProjectsToDisplay
+          refetch={refetch}
+          projectsToDisplay={projectsToDisplay}
+        />
+        }
       </div>
     </div>
   );

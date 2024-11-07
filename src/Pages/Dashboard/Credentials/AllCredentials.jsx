@@ -2,6 +2,7 @@ import { useState } from "react";
 import AllCredentialsToDisplay from "./AllCredentialsToDisplay";
 import AddCredential from "./AddCredential";
 import useFetchCredentials from "../../../Hooks/useFetchCredentials";
+import Skeleton from "react-loading-skeleton";
 
 const AllCredentials = () => {
   // const [datas, setDatas] = useState([]);
@@ -40,7 +41,7 @@ const AllCredentials = () => {
         <div>
           <button
             onClick={() => setShowModal(true)}
-            className="btn btn-ghost bg-[#00938a] text-white p-2 rounded-md"
+            className="btn btn-ghost shadow-xl bg-[#00938a] hover:bg-[#00938a] text-white p-2 rounded-md"
           >
             ADD A Credential
           </button>
@@ -55,20 +56,24 @@ const AllCredentials = () => {
             <input
               type="text"
               name="search"
-              className="hover:border-none px-5 join-item"
-              placeholder="Search a project..."
+              className="hover:border-none px-5 join-item bg-[#fff] shadow-xl outline-none"
+              placeholder="Search a credential..."
             />
-            <button className="btn join-item rounded-r-md bg-[#00938a] text-white p-2">
+            <button className="btn join-item rounded-r-md bg-[#00938a] hover:bg-[#00938a] border-none text-white p-2">
               SEARCH
             </button>
           </form>
         </div>
       </div>
       <div>
-        <AllCredentialsToDisplay
-          refetch={refetch}
-          credentialsToDisplay={credentialsToDisplay}
-        />
+        {credentialsToDisplay.length ? (
+          <AllCredentialsToDisplay
+            refetch={refetch}
+            credentialsToDisplay={credentialsToDisplay}
+          />
+        ) : (
+          <Skeleton count={credentialsToDisplay.length} />
+        )}
       </div>
     </div>
   );
