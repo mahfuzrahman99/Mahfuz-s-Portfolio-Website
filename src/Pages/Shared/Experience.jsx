@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import companyLogo from "/src/assets/ts4ubootcamp_logo.jpg";
 
 const Experience = () => {
   //   const [currentDate, setCurrentDate] = useState("");
@@ -51,7 +52,7 @@ const Experience = () => {
         {/* Company Logo */}
         <div>
           <img
-            src="/src/assets/ts4ubootcamp_logo.jpg"
+            src={companyLogo}
             alt="TS4U Logo"
             className=" max-w-none rounded-xl"
           />
