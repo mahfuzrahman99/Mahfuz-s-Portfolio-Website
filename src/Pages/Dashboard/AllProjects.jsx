@@ -49,7 +49,6 @@ const AllProjects = () => {
       </div>
       <div>
         {
-
         <AllProjectsToDisplay
           refetch={refetch}
           projectsToDisplay={projectsToDisplay}

@@ -4,7 +4,7 @@ import About from "./Shared/About";
 // import AllSkills from "./Shared/AllSkills";
 import Banner from "./Shared/Banner";
 import Contact from "./Shared/Contact";
-import Education from "./Shared/Education";
+// import Education from "./Shared/Education";
 import Experience from "./Shared/Experience";
 import Footer from "./Shared/Footer";
 import Navbar from "./Shared/Navbar";
@@ -40,15 +40,15 @@ const Home = () => {
       </div>
       <div id="education" className="max-w-5xl mx-auto my-24">
         <h1 className="text-4xl font-bold underline mb-3">
-          Education & Experience
+        Experience
         </h1>
         <div className="md:grid grid-cols-2">
           <div>
             <Experience />
           </div>
-          <div className="col-span-1">
+          {/* <div className="col-span-1">
             <Education />
-          </div>
+          </div> */}
         </div>
       </div>
       {/* <div>

@@ -33,7 +33,7 @@ const Navbar = () => {
       <li>
         <a
           href="#about"
-          className="font-bold hover:text-[#47b2f1] hover:font-bold  text-[#47b2f1]"
+          className="font-bold hover:text-[#47b2f1] hover:bg-transparent hover:border-b-2 duration-2000 hover:font-bold  text-[#47b2f1] nev_menu"
         >
           ABOUT
         </a>
@@ -41,7 +41,7 @@ const Navbar = () => {
       <li>
         <a
           href="#contact"
-          className="font-bold hover:text-[#47b2f1] hover:font-bold  text-[#47b2f1]"
+          className="font-bold hover:text-[#47b2f1] hover:bg-transparent hover:border-b-2 duration-2000 hover:font-bold  text-[#47b2f1] nev_menu"
         >
           CONTACT
         </a>
@@ -49,7 +49,7 @@ const Navbar = () => {
       <li>
         <a
           href="#portfolio"
-          className="font-bold hover:text-[#47b2f1] hover:font-bold  text-[#47b2f1]"
+          className="font-bold hover:text-[#47b2f1] hover:bg-transparent hover:border-b-2 duration-2000 hover:font-bold  text-[#47b2f1] nev_menu"
         >
           PORTFOLIO
         </a>
@@ -57,16 +57,24 @@ const Navbar = () => {
       <li>
         <a
           href="#skills"
-          className="font-bold hover:text-[#47b2f1] hover:font-bold  text-[#47b2f1]"
+          className="font-bold hover:text-[#47b2f1] hover:bg-transparent hover:border-b-2 duration-2000 hover:font-bold  text-[#47b2f1] nev_menu"
         >
           SKILLS
+        </a>
+      </li>
+      <li>
+        <a
+          href="#skills"
+          className="font-bold hover:text-[#47b2f1] hover:bg-transparent hover:border-b-2 duration-2000 hover:font-bold  text-[#47b2f1] nev_menu"
+        >
+          EXPRERIENCE
         </a>
       </li>
       { admin &&  
       <li>
         <NavLink
           to="/owner_Dashboard/allProjects"
-          className="font-bold hover:text-[#47b2f1] hover:font-bold  text-[#47b2f1]"
+          className="font-bold hover:text-[#47b2f1] hover:bg-transparent hover:border-b-2 duration-2000 hover:font-bold  text-[#47b2f1] nev_menu"
         >
           OWNER PROFILE
         </NavLink>

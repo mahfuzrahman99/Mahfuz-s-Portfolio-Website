@@ -9,14 +9,14 @@ import "react-photo-view/dist/react-photo-view.css";
 const Banner = () => {
   return (
     <div className="flex items-center md:pt-14">
-      <div className="absolute hidden md:block">
-        <div className="fixed top-[35%]">
-          <div className="group">
+      <div className="hidden md:block">
+        <div className="fixed top-[35%] flex flex-col items-end">
+          <div className="hover:translate-x-[-3px] transition-transform duration-[1300ms] -translate-x-[108px]">
             <a
               href="https://www.linkedin.com/in/mahfuzur-rahman-shabbir-0496752a4/"
-              className="px-2 flex gap-1 items-center transform transition-transform duration-1000 group-hover:flex-none group-hover:-translate-x-2 "
+              className="px-2 flex gap-1 items-center"
             >
-              <p className="group-hover:flex hidden text-2xl  font-bold">
+              <p className="text-2xl  font-bold">
                 LinkedIn
               </p>
               <p className="text-6xl">
@@ -24,12 +24,12 @@ const Banner = () => {
               </p>
             </a>
           </div>
-          <div className="group">
+          <div className="hover:translate-x-[-20px] transition-transform duration-[1300ms] -translate-x-[108px]">
             <a
               href="https://github.com/mahfuzrahman99"
-              className="px-2 flex gap-1 items-center transform transition-transform duration-1000 group-hover:flex-none group-hover:-translate-x-2"
+              className="px-2 flex gap-1 items-center "
             >
-              <p className="group-hover:flex hidden text-2xl font-bold">
+              <p className="text-2xl font-bold">
                 Github
               </p>
               <p className="text-6xl">
@@ -37,12 +37,12 @@ const Banner = () => {
               </p>
             </a>
           </div>
-          <div className="group transition-all duration-1000">
+          <div className="hover:translate-x-[-36px] transition-transform duration-[1300ms] -translate-x-[108px]">
             <a
               href="mailto:mahfuzurrahmanshabbir@gmail.com"
-              className="px-2 flex gap-1 items-center group-hover:flex-none group-hover:-translate-x-2"
+              className="px-2 flex gap-1 items-center"
             >
-              <p className="group-hover:flex hidden text-2xl font-bold ">
+              <p className="text-2xl font-bold ">
                 Email
               </p>
               <p className="text-6xl">
