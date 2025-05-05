@@ -11,15 +11,15 @@ const Contact = () => {
   const sendEmail = (e) => {
       e.preventDefault();
 
-      emailjs.sendForm('service_bj3b4ul', 'template_k2ek7hd', form.current, 'Jt6ao0Fbi7ZpYFZOw')
-      // emailjs.sendForm('service_fsiuqse', 'template_k2ek7hd', form.current, 'Jt6ao0Fbi7ZpYFZOw')
+      emailjs.sendForm('service_fsiuqse', 'template_k2ek7hd', form.current, 'Jt6ao0Fbi7ZpYFZOw')
+      // emailjs.sendForm('service_ID', 'template_ID', form.current, 'PUBLIC_key')
         .then((result) => {
             console.log(result.text);
             if(result.text){
               Swal.fire({
                   position: "top",
                   icon: "success",
-                  title: "Your message has been send",
+                  title: "Your message has been send successfully",
                   showConfirmButton: false,
                   timer: 1500
                   });
